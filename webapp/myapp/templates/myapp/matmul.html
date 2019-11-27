@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Matmul</title>
+    <title>แสดงข้อมูล</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</head>
+<div style="text-align: center;">
+<body>
+    <h1 align="center">แสดงข้อมูลที่บันทึกไว้</h1>
+    <table>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <span> Matrix A:</span>
+            <textarea rows=6 cols="60" name='A'>{{A}}</textarea>
+            <span> Matrix 8</span>
+            <textarea rows=6 cols="60" name='B'>{{B}}</textarea>
+        </div>
+        <div >
+            <button type="submit">Multiply</button>
+        </div>
+    </form>
+    <div style="text-align: center;">
+    <textarea rows=6 cols=60 name="c">{{C}}</textarea></div>
+    </table>
+</body>
+</div>
+</html>
