@@ -25,7 +25,21 @@
         </div>
     </form>
     <div style="text-align: center;">
-    <textarea rows=6 cols=60 name="c">{{C}}</textarea></div>
+    <textarea rows=6 cols=60 name="c">{{C}}</textarea>
+</div>
+<div style="text-align: center;">
+  <center>  <table border="1">
+        {% for r in C %}
+        <tr>
+            {% for c in r %}
+            <td>
+                {{c}}
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+    </table> </center>
+</div>
     </table>
 </body>
 </div>
